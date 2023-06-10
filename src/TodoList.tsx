@@ -57,12 +57,13 @@ export const TodoList: React.FC = () => {
   };
 
   const handleFilterChange = (filter: string, index: number) => {
-    setTaskFilter(filter);
-    setCurrentTasksStatus(index);
+
     setNextPage('down');
 
     setTimeout(() => {
       setNextPage('up');
+      setTaskFilter(filter);
+      setCurrentTasksStatus(index);
     }, 100);
   };
 
